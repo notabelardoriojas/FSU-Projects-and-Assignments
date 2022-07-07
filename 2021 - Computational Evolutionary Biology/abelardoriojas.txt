@@ -1,0 +1,6 @@
+ISC 5317 Assignment 3 Revbayes Comments
+
+
+Using the script generator was easier than using a text editor to generate the phylogeny, however if I had not read through the tutorial for RevBayes before using the script generator, I would have been lost on this assignment. The tutorial goes in depth into the purpose of every line in the script and how to change the parameters of the MCMC calcuations. Without the tutorial I would of had no concrete basis as to what I was doing in RevBayes. 
+
+Generating a script and running it through the command line was no trouble for me, as the R syntax used in the script was familiar to me. Overall, I would advise a someone just starting to work with RevBayes to go through the tutorial first, read up on R syntax, and then use the script generator.

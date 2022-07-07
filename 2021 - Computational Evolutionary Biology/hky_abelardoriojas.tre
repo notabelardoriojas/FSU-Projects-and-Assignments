@@ -1,0 +1,60 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Tue Oct  5 13:51:26 2021]
+[!
+>Data file = primate-mtDNA.nex
+>Heuristic search settings:
+>  Optimality criterion = likelihood
+>    All characters have equal weight
+>    Likelihood settings:
+>                  DNA substitution types = 2 (HKY85 variant)
+>                             Ti/tv ratio = estimated
+>                       State frequencies = estimated
+>          Proportion of invariable sites = estimated
+>                 Rates at variable sites = equal
+>                    Model correspondence = HKY85+I
+>
+>      Number of distinct data patterns under this model = 413
+>      Molecular clock not enforced
+>      Starting branch lengths obtained using Rogers-Swofford approximation method
+>      Trees with approximate log likelihoods 5% or further from the target score are rejected without additional iteration
+>      Branch-length optimization = one-dimensional Newton-Raphson with pass limit=20, tolerance=1e-07
+>      Multidimensional optimizer = Praxis (tol=0.0001)
+>      Likelihood calculations performed in single precision
+>      Vector processing enabled
+>      Using standard Felsenstein pruning for computing likelihoods
+>      Conditional-likelihood rescaling threshold = 1e-20
+>
+>  Starting tree(s) obtained via stepwise addition
+>    Addition sequence: as-is
+>    Number of trees held at each step = 1
+>  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+>    Steepest descent option not in effect
+>  Initial 'Maxtrees' setting = 100
+>  Branches collapsed (creating polytomies) if branch length is less than or equal to 1e-08
+>  'MulTrees' option in effect
+>  No topological constraints in effect
+>  Trees are unrooted
+>
+>Heuristic search completed
+>  Total number of rearrangements tried = 560
+>  Score of best tree(s) found = 5768.004
+>  Number of trees retained = 1
+>  Time used = 00:02:13 (CPU time = 00:02:10.2)
+]
+	Translate
+		1 Lemur_catta,
+		2 Homo_sapiens,
+		3 Pan,
+		4 Gorilla,
+		5 Pongo,
+		6 Hylobates,
+		7 Macaca_fuscata,
+		8 M._mulatta,
+		9 M._fascicularis,
+		10 M._sylvanus,
+		11 Saimiri_sciureus,
+		12 Tarsius_syrichta
+		;
+tree 'PAUP_1' = [&U] (1,((((((2,3),4),5),6),(((7,8),9),10)),11),12);
+End;

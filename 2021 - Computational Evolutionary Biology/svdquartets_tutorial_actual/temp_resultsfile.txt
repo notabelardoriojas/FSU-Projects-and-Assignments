@@ -1,0 +1,2 @@
+NLoci	SitesPerLocus	Rep	svdq_Ntrees	svdq_correct	svdq_P
+100	200	means	1.000000	0.700000	0.866667

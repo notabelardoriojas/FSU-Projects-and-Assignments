@@ -1,0 +1,226 @@
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Zika virus                                                       
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +                                                                +
+ +   POPULATION SIZE, MIGRATION, DIVERGENCE, ASSIGNMENT, HISTORY  +
+ +   Bayesian inference using the structured coalescent           +
+ +                                                                +
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Using Intel AVX (Advanced Vector Extensions)
+  Compiled for a SYMMETRIC multiprocessors (GrandCentral)
+  PDF output enabled [Letter-size]
+  Version 4.4.3(git:v4-series-22-g8eb486b)   [March-21-2019]
+  Program started at   Mon Nov  8 21:23:07 2021
+         finished at Mon Nov  8 21:24:27 2021
+                          
+
+
+Options in use:
+---------------
+
+Analysis strategy is BAYESIAN INFERENCE
+    - Population size estimation: Theta [Exponential Distribution]
+    - Geneflow estimation: Migration [Exponential Distribution]
+    - Divergence estimation: Divergence time [Normal Distribution [Shortcut] with mean and]
+                                             [and standard deviation sigma     ]
+
+Proposal distribution:
+Parameter group          Proposal type
+-----------------------  -------------------
+Population size (Theta)  Metropolis sampling
+Migration rate      (M)  Metropolis sampling
+Divergence Time (D)  Metropolis sampling
+Divergence time spread (STD) Metropolis sampling
+Genealogy                Metropolis-Hastings
+
+
+Prior distribution (Proposal-delta will be tuned to acceptance frequence 0.440000):
+Parameter group            Prior type   Minimum    Mean(*)    Maximum    Delta      Bins   Updatefreq
+-------------------------  ------------ ---------- ---------- ---------- ---------- ------ -------
+Population size (Theta_1)      Uniform  0.000000   0.050000   0.100000   0.010000    1500  0.12500
+Population size (Theta_2)      Uniform  0.000000   0.050000   0.100000   0.010000    1500  0.12500
+Ancestor 1 to 2 (D_time)      Uniform  0.000000   0.200000   0.400000   0.010000    1500  0.12500
+Ancestor 1 to 2 (S_time)      Uniform  0.000000   0.200000   0.400000   0.010000    1500  0.12500
+
+
+
+
+Inheritance scalers in use for Thetas (specified scalars=1)
+1.00 
+[Each Theta uses the (true) inheritance scalar of the first locus as a reference]
+
+
+Pseudo-random number generator: Mersenne-Twister                                
+Random number seed (with internal timer)            463194855
+
+Start parameters:
+   First genealogy was started using a random tree
+   Start parameter values were generated
+Connection matrix:
+m = average (average over a group of Thetas or M,
+s = symmetric migration M, S = symmetric 4Nm,
+0 = zero, and not estimated,
+* = migration free to vary, Thetas are on diagonal
+d = row population split off column population
+D = split and then migration
+   1 Africa         * 0 0 0 0 
+   2 China          d * * * * 
+   2 Brazil         d * * * * 
+   2 Mexico_and     d * * * * 
+   2 Puerto_Ric     d * * * * 
+
+
+
+Mutation rate is constant 
+
+Markov chain settings:
+   Long chains (long-chains):                              1
+      Steps sampled (inc*samples*rep):                180000
+      Steps recorded (sample*rep):                     18000
+   Combining over replicates:                              2
+   Static heating scheme
+      4 chains with  temperatures
+       1.00, 1.50, 3.00,1000000.00
+      Swapping interval is 1
+   Burn-in per replicate (samples*inc):                10000
+
+Print options:
+   Data file:                                         infile
+   Haplotyping is turned on:                              NO
+   Output file (ASCII text):                     outfile_own
+   Output file (PDF):                        outfile_own.pdf
+   Posterior distribution:                         bayesfile
+   Print data:                                            No
+   Print genealogies:                                     No
+
+Summary of data:
+Title:                                            Zika virus
+Data file:                                            infile
+Datatype:                                     Haplotype data
+Number of loci:                                            1
+Mutationmodel:
+ Locus  Sublocus  Mutationmodel   Mutationmodel parameter
+-----------------------------------------------------------------
+     1         1 Felsenstein 84  [Bf:0.27 0.22 0.29 0.21, t/t ratio=2.000]
+
+
+Sites per locus
+---------------
+Locus    Sites
+     1     10269
+
+Site Rate variation per locus
+-----------------------------
+
+Locus Sublocus Region type     Rate of change    Probability  Patch size
+--------------------------------------------------------------------------
+   1       1        1           0.428            0.680            1.000
+   1       1        2           2.081            0.308            1.000
+   1       1        3           5.491            0.012            1.000
+
+
+Population                   Locus   Gene copies    
+----------------------------------------------------
+  1 Africa                       1         5
+  2 China                        1        12
+  2 Brazil                       1        13
+  2 Mexico_and_neighbors         1         8
+  2 Puerto_Rico                  1         2
+    Total of all populations     1        40
+
+
+
+
+Bayesian estimates
+==================
+
+Locus Parameter        2.5%      25.0%    mode     75.0%   97.5%     median   mean
+-----------------------------------------------------------------------------------
+    1  Theta_1         0.04593  0.05660  0.05703  0.05720  0.05727  0.05963  0.06045
+    1  Theta_2         0.01393  0.01807  0.01977  0.02000  0.02727  0.02030  0.02074
+    1  D_1->2          0.00000  0.04053  0.04253  0.04507  0.14640  0.12253  0.14942
+    1  S_1->2          0.37867  0.38587  0.38627  0.38640  0.39547  0.23373  0.22409
+-----------------------------------------------------------------------------------
+
+
+
+Log-Probability of the data given the model (marginal likelihood = log(P(D|thisModel))
+--------------------------------------------------------------------
+[Use this value for Bayes factor calculations:
+BF = Exp[log(P(D|thisModel) - log(P(D|otherModel)]
+shows the support for thisModel]
+
+
+
+Locus      Raw Thermodynamic score(1a)  Bezier approximated score(1b)      Harmonic mean(2)
+------------------------------------------------------------------------------------------
+  All               -27810.06                     -25828.56              -25689.62
+[Scaling factor = 0.000000]
+
+
+(1a) Thermodynamic integration: log(Prob(D|Model)): Good approximation with many temperatures
+(1b) Bezier-approximated Thermodynamic integration: when using few temperatures USE THIS!
+(2)  Harmonic mean approximation: Overestimates the marginal likelihood, poor variance
+
+
+
+MCMC run characteristics
+========================
+
+
+
+
+Acceptance ratios for all parameters and the genealogies
+---------------------------------------------------------------------
+
+Parameter           Accepted changes               Ratio
+Theta_1                  17885/22762             0.78574
+Theta_2                  11738/22459             0.52264
+D_1->2                    21458/22496             0.95386
+S_1->2                     1778/22087             0.08050
+Genealogies               1778/90196              0.01971
+
+
+
+Autocorrelation for all parameters and the genealogies
+------------------------------------------------------------------------
+
+Parameter           Autocorrelation                Effective Sample size
+Theta_1                   0.727                  3025.470
+Theta_2                   0.730                  2840.926
+D_1->2                    0.972                   258.287
+S_1->2                    0.969                   290.588
+Genealogies               0.997                     29.178
+
+POTENTIAL PROBLEMS
+------------------------------------------------------------------------------------------
+This section reports potential problems with your run, but such reporting is often not 
+very accurate. Whith many parameters in a multilocus analysis, it is very common that 
+some parameters for some loci will not be very informative, triggering suggestions (for 
+example to increase the prior range) that are not sensible. This suggestion tool will 
+improve with time, therefore do not blindly follow its suggestions. If some parameters 
+are flagged, inspect the tables carefully and judge wether an action is required. For 
+example, if you run a Bayesian inference with sequence data, for macroscopic species 
+there is rarely the need to increase the prior for Theta beyond 0.1; but if you use 
+microsatellites it is rather common that your prior distribution for Theta should have a 
+range from 0.0 to 100 or more. With many populations (>3) it is also very common that 
+some migration routes are estimated poorly because the data contains little or no 
+information for that route. Increasing the range will not help in such situations, 
+reducing number of parameters may help in such situations.
+------------------------------------------------------------------------------------------
+Param 6 (Locus 1): Upper prior boundary seems too low! 
+------------------------------------------------------------------------------------------
+
+
+Model                       Log(mL)   LBF     Model-probability
+---------------------------------------------------------------
+1:outfile_migration:            -27336.42 -1507.86        0.0000 
+2:outfile_west:                 -26618.24  -789.68        0.0000 
+3:outfile_panmictic:            -26615.99  -787.43        0.0000 
+4:outfile_eastnorthmig:         -26409.32  -580.76        0.0000 
+5:outfile_eastnorth:            -26028.93  -200.37        0.0000 
+6:outfile_twoways:              -25990.20  -161.64        0.0000 
+7:outfile_eastsplam:            -25934.78  -106.22        0.0000 
+8:outfile_own_riojas:           -25828.56     0.00        1.0000 
+
+My model had the Zika virus originating from Africa and then spreading to all of the other regions as a single panmictic region. My intuition told me that with our advances in technology, the virus probably spread around the world at the same time, much like the Coronavirus! My model has the highest log_likelihood, therefore it's the best out of the 8 models!

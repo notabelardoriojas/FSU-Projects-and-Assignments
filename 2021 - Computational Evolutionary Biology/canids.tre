@@ -1,0 +1,18 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Tue Oct 19 13:50:08 2021]
+[!
+>Data file = canids.nex
+]
+	Translate
+		1 sidestriped_jackal,
+		2 African_golden_wolf,
+		3 coyote,
+		4 gray_wolf,
+		5 blackbacked_jackal,
+		6 Ethiopian_wolf,
+		7 Dhole,
+		8 African_wild_dog
+		;
+tree 'PAUP_1' = [&U] (1:100,((((2:100,(3:100,4:100):53):69,6:100):68,7:100):66,8:100):78,5:100);
+End;

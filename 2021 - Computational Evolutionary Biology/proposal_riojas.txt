@@ -1,0 +1,3 @@
+Comp. Evo. Bio. Final Project Proposal. Abelardo Riojas Fall 2021.
+
+My project uses phylogenetic data from Kennedy M., & Spencer H. 2004. Phylogenies of the Frigatebirds (Fregatidae) and Tropicbirds (Phaethonidae). After doing some research into what I could do with the sequence data and three trees given in Dendropy, my project does four things. First it, generates population summary statistics between the two species of pelicans. Seconds it finds the parsimony score of the three trees. Third it generates unary tree statistics for the most parsimonious tree. Lastly, it compares the distance between the two trees using the Robinson-Foulds distance metric. Analysis of these statistics is included in the presentation and report.

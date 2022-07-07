@@ -1,0 +1,1527 @@
+
+P A U P *
+Version 4.0a (build 168) for macOS (built on Aug  2 2020 at 06:41:30)
+Thu Oct 14 10:00:48 2021
+
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/anomaly_zone.nex" begins...
+
+Data read in DNA format
+
+Data matrix has 5 taxa, 5000000 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+
+Outgroup status changed:
+  1 taxon transferred to outgroup
+  Total number of taxa now in outgroup = 1
+  Number of ingroup taxa = 4
+
+Processing of input file "anomaly_zone.nex" completed.
+
+paup> dset distance=logdet;
+
+paup> nj;
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = LogDet/paralinear
+  5000000 characters are included
+  All characters have equal weight
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+                                                                                    /--------------------------------- A
+                                                                                   /+
+                                                                                   |\--------------------------------- B
+                                                                                  /+
+/---------------------------------------------------------------------------------+\---------------------------------- C
+|                                                                                 |
+|                                                                                 \----------------------------------- D
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> automodel;
+
+Evaluating models for tree 1:
+
+                                     ----- K -----
+     #  Model                 -lnL   subst   total            AICc             BIC
+----------------------------------------------------------------------------------
+     1  JC          21508680.89692       0       7  43017375.79387  43017469.76849
+     2  JC+I        21232461.15679       1       8  42464938.31362  42465045.71318
+     3  JC+G        21204249.24934       1       8  42408514.49871  42408621.89827
+     4  JC+I+G      21204249.24934       2       9  42408516.49872  42408637.32322
+     5  F81         21348792.34226       3      10  42697604.68457  42697738.93401
+     6  F81+I       21069358.70468       4      11  42138739.40942  42138887.08380
+     7  F81+G       21039633.94803       4      11  42079289.89612  42079437.57050
+     8  F81+I+G     21039632.41177       5      12  42079288.82359  42079449.92291
+     9  K80         21195022.51430       1       8  42390061.02862  42390168.42818
+    10  K80+I       20883611.53500       2       9  41767241.07003  41767361.89453
+    11  K80+G       20826103.04837       2       9  41652224.09678  41652344.92128
+    12  K80+I+G     20826102.92142       3      10  41652225.84288  41652360.09232
+    13  HKY         20998527.35115       4      11  41997076.70235  41997224.37673
+    14  HKY+I       20692367.28156       5      12  41384758.56317  41384919.66249
+    15  HKY+G       20628361.30847       5      12  41256746.61700  41256907.71632
+    16  HKY+I+G     20628361.27315       6      13  41256748.54637  41256923.07062
+    17  TrNef       21155409.95757       2       9  42310837.91517  42310958.73967
+    18  TrNef+I     20852905.22494       3      10  41705830.44993  41705964.69937
+    19  TrNef+G     20788328.93612       3      10  41576677.87229  41576812.12173
+    20  TrNef+I+G   20788328.93612       4      11  41576679.87230  41576827.54668
+    21  TrN         20965498.30071       5      12  41931020.60149  41931181.70081
+    22  TrN+I       20668732.99035       6      13  41337491.98078  41337666.50504
+    23  TrN+G       20597905.75238       6      13  41195837.50483  41196012.02909
+    24  TrN+I+G     20597905.75238       7      14  41195839.50484  41196027.45404
+    25  K81         21193031.24364       2       9  42386080.48732  42386201.31182
+    26  K81+I       20882409.24952       3      10  41764838.49909  41764972.74853
+    27  K81+G       20824434.32313       3      10  41648888.64630  41649022.89574
+    28  K81+I+G     20824434.23619       4      11  41648890.47243  41649038.14681
+    29  K81uf       20998522.93949       5      12  41997069.87904  41997230.97836
+    30  K81uf+I     20692350.18215       6      13  41384726.36436  41384900.88862
+    31  K81uf+G     20628358.78539       6      13  41256743.57085  41256918.09511
+    32  K81uf+I+G   20628358.51137       7      14  41256745.02282  41256932.97201
+    33  TIMef       21153425.35727       3      10  42306870.71458  42307004.96402
+    34  TIMef+I     20851664.65947       4      11  41703351.31899  41703498.99337
+    35  TIMef+G     20786656.34246       4      11  41573334.68496  41573482.35934
+    36  TIMef+I+G   20786656.22004       5      12  41573336.44014  41573497.53946
+    37  TIM         20965494.86190       6      13  41931015.72388  41931190.24814
+    38  TIM+I       20668719.00239       7      14  41337466.00486  41337653.95406
+    39  TIM+G       20597902.09454       7      14  41195832.18916  41196020.13835
+    40  TIM+I+G     20597902.09454       8      15  41195834.18917  41196035.56330
+    41  TVMef       21181381.95487       4      11  42362785.90979  42362933.58417
+    42  TVMef+I     20866737.57049       5      12  41733499.14104  41733660.24036
+    43  TVMef+G     20805426.27472       5      12  41610876.54951  41611037.64883
+    44  TVMef+I+G   20805426.27472       6      13  41610878.54952  41611053.07378
+    45  TVM         20998497.66910       7      14  41997023.33827  41997211.28747
+    46  TVM+I       20692190.60305       8      15  41384411.20619  41384612.58032
+    47  TVM+G       20628189.28782       8      15  41256408.57574  41256609.94987
+    48  TVM+I+G     20628189.28782       9      16  41256410.57575  41256625.37482
+    49  SYM         21141871.37667       5      12  42283766.75340  42283927.85272
+    50  SYM+I       20835914.81122       6      13  41671855.62252  41672030.14678
+    51  SYM+G       20767701.04266       6      13  41535428.08539  41535602.60965
+    52  SYM+I+G     20767700.98582       7      14  41535429.97173  41535617.92092
+    53  GTR         20965483.22945       8      15  41930996.45900  41931197.83313
+    54  GTR+I       20668590.48029       9      16  41337212.96069  41337427.75976
+    55  GTR+G       20597897.98585       9      16  41195827.97181  41196042.77088
+    56  GTR+I+G     20597897.98585      10      17  41195829.97183  41196058.19583
+
+Model selection results for AICc:
+
+                                                                     delta        AICc     cumul
+     #  Model                 -lnL       K            AICc            AICc      weight    weight
+------------------------------------------------------------------------------------------------
+    55  GTR+G       20597897.98585      16  41195827.97181         0.00000      0.6470    0.6470
+    56  GTR+I+G     20597897.98585      17  41195829.97183         2.00001      0.2380    0.8850
+    39  TIM+G       20597902.09454      14  41195832.18916         4.21734      0.0785    0.9636
+    40  TIM+I+G     20597902.09454      15  41195834.18917         6.21736      0.0289    0.9925
+    23  TrN+G       20597905.75238      13  41195837.50483         9.53302      0.0055    0.9980
+    24  TrN+I+G     20597905.75238      14  41195839.50484        11.53303      0.0020    1.0000
+    47  TVM+G       20628189.28782      15  41256408.57574     60580.60393           0    1.0000
+    48  TVM+I+G     20628189.28782      16  41256410.57575     60582.60394           0    1.0000
+    31  K81uf+G     20628358.78539      13  41256743.57085     60915.59904           0    1.0000
+    32  K81uf+I+G   20628358.51137      14  41256745.02282     60917.05101           0    1.0000
+    15  HKY+G       20628361.30847      12  41256746.61700     60918.64519           0    1.0000
+    16  HKY+I+G     20628361.27315      13  41256748.54637     60920.57455           0    1.0000
+    54  GTR+I       20668590.48029      16  41337212.96069    141384.98888           0    1.0000
+    38  TIM+I       20668719.00239      14  41337466.00486    141638.03305           0    1.0000
+    22  TrN+I       20668732.99035      13  41337491.98078    141664.00897           0    1.0000
+    46  TVM+I       20692190.60305      15  41384411.20619    188583.23438           0    1.0000
+    30  K81uf+I     20692350.18215      13  41384726.36436    188898.39255           0    1.0000
+    14  HKY+I       20692367.28156      12  41384758.56317    188930.59136           0    1.0000
+    51  SYM+G       20767701.04266      13  41535428.08539    339600.11358           0    1.0000
+    52  SYM+I+G     20767700.98582      14  41535429.97173    339601.99992           0    1.0000
+    35  TIMef+G     20786656.34246      11  41573334.68496    377506.71315           0    1.0000
+    36  TIMef+I+G   20786656.22004      12  41573336.44014    377508.46833           0    1.0000
+    19  TrNef+G     20788328.93612      10  41576677.87229    380849.90048           0    1.0000
+    20  TrNef+I+G   20788328.93612      11  41576679.87230    380851.90049           0    1.0000
+    43  TVMef+G     20805426.27472      12  41610876.54951    415048.57770           0    1.0000
+    44  TVMef+I+G   20805426.27472      13  41610878.54952    415050.57771           0    1.0000
+    27  K81+G       20824434.32313      10  41648888.64630    453060.67449           0    1.0000
+    28  K81+I+G     20824434.23619      11  41648890.47243    453062.50061           0    1.0000
+    11  K80+G       20826103.04837       9  41652224.09678    456396.12496           0    1.0000
+    12  K80+I+G     20826102.92142      10  41652225.84288    456397.87107           0    1.0000
+    50  SYM+I       20835914.81122      13  41671855.62252    476027.65071           0    1.0000
+    34  TIMef+I     20851664.65947      11  41703351.31899    507523.34718           0    1.0000
+    18  TrNef+I     20852905.22494      10  41705830.44993    510002.47811           0    1.0000
+    42  TVMef+I     20866737.57049      12  41733499.14104    537671.16923           0    1.0000
+    26  K81+I       20882409.24952      10  41764838.49909    569010.52728           0    1.0000
+    10  K80+I       20883611.53500       9  41767241.07003    571413.09822           0    1.0000
+    53  GTR         20965483.22945      15  41930996.45900    735168.48719           0    1.0000
+    37  TIM         20965494.86190      13  41931015.72388    735187.75207           0    1.0000
+    21  TrN         20965498.30071      12  41931020.60149    735192.62968           0    1.0000
+    45  TVM         20998497.66910      14  41997023.33827    801195.36646           0    1.0000
+    29  K81uf       20998522.93949      12  41997069.87904    801241.90723           0    1.0000
+    13  HKY         20998527.35115      11  41997076.70235    801248.73053           0    1.0000
+     8  F81+I+G     21039632.41177      12  42079288.82359    883460.85178           0    1.0000
+     7  F81+G       21039633.94803      11  42079289.89612    883461.92430           0    1.0000
+     6  F81+I       21069358.70468      11  42138739.40942    942911.43761           0    1.0000
+    49  SYM         21141871.37667      12  42283766.75340   1087938.78159           0    1.0000
+    33  TIMef       21153425.35727      10  42306870.71458   1111042.74277           0    1.0000
+    17  TrNef       21155409.95757       9  42310837.91517   1115009.94335           0    1.0000
+    41  TVMef       21181381.95487      11  42362785.90979   1166957.93798           0    1.0000
+    25  K81         21193031.24364       9  42386080.48732   1190252.51551           0    1.0000
+     9  K80         21195022.51430       8  42390061.02862   1194233.05681           0    1.0000
+     3  JC+G        21204249.24934       8  42408514.49871   1212686.52690           0    1.0000
+     4  JC+I+G      21204249.24934       9  42408516.49872   1212688.52691           0    1.0000
+     2  JC+I        21232461.15679       8  42464938.31362   1269110.34180           0    1.0000
+     5  F81         21348792.34226      10  42697604.68457   1501776.71276           0    1.0000
+     1  JC          21508680.89692       7  43017375.79387   1821547.82206           0    1.0000
+
+Model selection results for BIC:
+
+                                                                     delta         BIC     cumul
+     #  Model                 -lnL       K             BIC             BIC      weight    weight
+------------------------------------------------------------------------------------------------
+    23  TrN+G       20597905.75238      13  41196012.02909         0.00000      0.9825    0.9825
+    39  TIM+G       20597902.09454      14  41196020.13835         8.10926      0.0170    0.9996
+    24  TrN+I+G     20597905.75238      14  41196027.45404        15.42495      0.0004    1.0000
+    40  TIM+I+G     20597902.09454      15  41196035.56330        23.53421   7.620e-06    1.0000
+    55  GTR+G       20597897.98585      16  41196042.77088        30.74179   2.074e-07    1.0000
+    56  GTR+I+G     20597897.98585      17  41196058.19583        46.16674   9.276e-11    1.0000
+    47  TVM+G       20628189.28782      15  41256609.94987     60597.92078           0    1.0000
+    48  TVM+I+G     20628189.28782      16  41256625.37482     60613.34573           0    1.0000
+    15  HKY+G       20628361.30847      12  41256907.71632     60895.68723           0    1.0000
+    31  K81uf+G     20628358.78539      13  41256918.09511     60906.06602           0    1.0000
+    16  HKY+I+G     20628361.27315      13  41256923.07062     60911.04153           0    1.0000
+    32  K81uf+I+G   20628358.51137      14  41256932.97201     60920.94292           0    1.0000
+    54  GTR+I       20668590.48029      16  41337427.75976    141415.73067           0    1.0000
+    38  TIM+I       20668719.00239      14  41337653.95406    141641.92497           0    1.0000
+    22  TrN+I       20668732.99035      13  41337666.50504    141654.47595           0    1.0000
+    46  TVM+I       20692190.60305      15  41384612.58032    188600.55123           0    1.0000
+    30  K81uf+I     20692350.18215      13  41384900.88862    188888.85953           0    1.0000
+    14  HKY+I       20692367.28156      12  41384919.66249    188907.63340           0    1.0000
+    51  SYM+G       20767701.04266      13  41535602.60965    339590.58056           0    1.0000
+    52  SYM+I+G     20767700.98582      14  41535617.92092    339605.89183           0    1.0000
+    35  TIMef+G     20786656.34246      11  41573482.35934    377470.33025           0    1.0000
+    36  TIMef+I+G   20786656.22004      12  41573497.53946    377485.51037           0    1.0000
+    19  TrNef+G     20788328.93612      10  41576812.12173    380800.09264           0    1.0000
+    20  TrNef+I+G   20788328.93612      11  41576827.54668    380815.51759           0    1.0000
+    43  TVMef+G     20805426.27472      12  41611037.64883    415025.61974           0    1.0000
+    44  TVMef+I+G   20805426.27472      13  41611053.07378    415041.04469           0    1.0000
+    27  K81+G       20824434.32313      10  41649022.89574    453010.86665           0    1.0000
+    28  K81+I+G     20824434.23619      11  41649038.14681    453026.11772           0    1.0000
+    11  K80+G       20826103.04837       9  41652344.92128    456332.89219           0    1.0000
+    12  K80+I+G     20826102.92142      10  41652360.09232    456348.06323           0    1.0000
+    50  SYM+I       20835914.81122      13  41672030.14678    476018.11769           0    1.0000
+    34  TIMef+I     20851664.65947      11  41703498.99337    507486.96428           0    1.0000
+    18  TrNef+I     20852905.22494      10  41705964.69937    509952.67028           0    1.0000
+    42  TVMef+I     20866737.57049      12  41733660.24036    537648.21127           0    1.0000
+    26  K81+I       20882409.24952      10  41764972.74853    568960.71944           0    1.0000
+    10  K80+I       20883611.53500       9  41767361.89453    571349.86544           0    1.0000
+    21  TrN         20965498.30071      12  41931181.70081    735169.67172           0    1.0000
+    37  TIM         20965494.86190      13  41931190.24814    735178.21905           0    1.0000
+    53  GTR         20965483.22945      15  41931197.83313    735185.80404           0    1.0000
+    45  TVM         20998497.66910      14  41997211.28747    801199.25838           0    1.0000
+    13  HKY         20998527.35115      11  41997224.37673    801212.34764           0    1.0000
+    29  K81uf       20998522.93949      12  41997230.97836    801218.94927           0    1.0000
+     7  F81+G       21039633.94803      11  42079437.57050    883425.54141           0    1.0000
+     8  F81+I+G     21039632.41177      12  42079449.92291    883437.89382           0    1.0000
+     6  F81+I       21069358.70468      11  42138887.08380    942875.05471           0    1.0000
+    49  SYM         21141871.37667      12  42283927.85272   1087915.82363           0    1.0000
+    33  TIMef       21153425.35727      10  42307004.96402   1110992.93493           0    1.0000
+    17  TrNef       21155409.95757       9  42310958.73967   1114946.71058           0    1.0000
+    41  TVMef       21181381.95487      11  42362933.58417   1166921.55508           0    1.0000
+    25  K81         21193031.24364       9  42386201.31182   1190189.28273           0    1.0000
+     9  K80         21195022.51430       8  42390168.42818   1194156.39909           0    1.0000
+     3  JC+G        21204249.24934       8  42408621.89827   1212609.86918           0    1.0000
+     4  JC+I+G      21204249.24934       9  42408637.32322   1212625.29413           0    1.0000
+     2  JC+I        21232461.15679       8  42465045.71318   1269033.68409           0    1.0000
+     5  F81         21348792.34226      10  42697738.93401   1501726.90492           0    1.0000
+     1  JC          21508680.89692       7  43017469.76849   1821457.73940           0    1.0000
+
+Command to set TrN+G model chosen by BIC would be:
+
+  lset nst=6 rclass=(abaaca) rmatrix=(1 2.9039164 1 1 5.7186143) basefreq=(0.29963651 0.20065243 0.19990202) rates=gamma
+      shape=0.43524286;
+
+Applying command to set GTR+G model chosen by AICc:
+  lset nst=6 rclass=(abcdef) rmatrix=(0.99172327 2.9073372 1.0093537 0.996446 5.7185451) basefreq=(0.29952001 0.2007636
+      0.19998214) rates=gamma shape=0.4348987;
+
+Time used for model selection = 10.74 sec (CPU time = 10.73 sec)
+
+paup> set criterion=likelihood;
+
+Optimality criterion set to likelihood.
+
+paup> hsearch;
+
+Heuristic search settings:
+  Optimality criterion = likelihood
+    5000000 characters are included
+    All characters have equal weight
+    Likelihood settings:
+      Current model:
+                               Data type = nucleotide
+                  DNA substitution types = 6
+                       Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                       State frequencies = user-specified: A=0.29952 C=0.200764 G=0.199982 T=0.299734
+          Proportion of invariable sites = none
+                 Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+                    Model correspondence = GTR+G
+
+      Number of distinct data patterns under this model = 1024
+      Molecular clock not enforced
+      Starting branch lengths obtained using Rogers-Swofford approximation method
+      Trees with approximate log likelihoods 5% or further from the target score are rejected without additional
+        iteration
+      Branch-length optimization = one-dimensional Newton-Raphson with pass limit=20, tolerance=1e-07
+      Likelihood calculations performed in single precision
+      Vector processing enabled
+      Using standard Felsenstein pruning for computing likelihoods
+      Conditional-likelihood rescaling threshold = 1e-20
+      Using 1 thread on 8 processors
+
+  Starting tree(s) obtained via stepwise addition
+    Addition sequence: as-is
+    Number of trees held at each step = 1
+  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+    Steepest descent option not in effect
+  Initial 'Maxtrees' setting = 100
+  Branches collapsed (creating polytomies) if branch length is less than or equal to 1e-08
+  'MulTrees' option in effect
+  No topological constraints in effect
+  Trees are unrooted
+
+Heuristic search completed
+  Total number of rearrangements tried = 12
+  Score of best tree(s) found = 20597776.75787
+  Number of trees retained = 1
+  Time used = 0.06 sec (CPU time = 0.06 sec)
+
+paup> describe/plot=p;
+
+Tree description:
+
+  Unrooted tree(s) rooted using outgroup method
+  Optimality criterion = likelihood
+    5000000 characters are included
+    All characters have equal weight
+    Likelihood settings:
+      Current model:
+                               Data type = nucleotide
+                  DNA substitution types = 6
+                       Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                       State frequencies = user-specified: A=0.29952 C=0.200764 G=0.199982 T=0.299734
+          Proportion of invariable sites = none
+                 Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+                    Model correspondence = GTR+G
+
+      Number of distinct data patterns under this model = 1024
+      Molecular clock not enforced
+      Starting branch lengths obtained using Rogers-Swofford approximation method
+      Branch-length optimization = one-dimensional Newton-Raphson with pass limit=20, tolerance=1e-07
+      Likelihood calculations performed in single precision
+      Vector processing enabled
+      Using standard Felsenstein pruning for computing likelihoods
+      Conditional-likelihood rescaling threshold = 1e-20
+      Using 1 thread on 8 processors
+
+Tree 1 (rooted using user-specified outgroup)
+
+-Ln likelihood = 20597776.8
+
+                                                                                                        /------------ A
+                                                                                                       /8
+                                                                                                       |\------------ B
+/------------------------------------------------------------------------------------------------------7
+|                                                                                                      |/------------ C
+|                                                                                                      \6
+|                                                                                                       \------------- D
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+paup> svdquartets ?;
+
+Usage: svdQuartets [options...];
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+evalQuartets    all|random                                         random
+nquartets       <real-value>                                       100000
+preferAllQ      no|yes                                             yes
+taxpartition    <taxpartition-name>|none                           none
+treeInf         QFM|curTrees|none                                  QFM
+seed            <int> or <int:int:int:int>                         0
+bootstrap       no|standard|multilocus                             no
+loci            <charpartition-name>                               (none)
+nreps           <integer-value>                                    100
+nthreads        auto|<number-of-threads>                           2
+mrpFile         <MRP-outfile-name>                                 none
+qfile           <quartet-file-name>                                none
+qformat         qmc|qfm                                            qmc
+replace         no|yes                                            *no
+showScores      no|yes                                             no
+showSV          no|yes                                             no
+treefile        <filename-for-treefile>                            none
+treemodel       mscoalescent|shared                                mscoalescent
+forceRank       <integer-value>                                    0
+keepQuartets    no|yes                                             no
+ambigs          missing|distribute                                 distribute
+plus2           no|yes                                             no
+
+The following options are for experimental research and are not generally safe/useful:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+includeInAll    no|<taxon-id>|<partition-subset-name>             *none
+qweights        none|reciprocal|exponential                        none
+wtlambda        <real-value>                                       1000
+lakeInvar       no|yes                                             no
+frobDFile       <filename-for-Frobenius-dists>                     none
+                                                                  *Option is nonpersistent
+
+paup> svdq evalq=all bootstrap;
+
+Analysis using SVDQuartets method
+
+  Number of taxa (lineages) in the analysis = 5
+  No species-membership partition is in effect; assuming one tip per species
+  Quartet sampling = exhaustive (5 quartets)
+  Doing standard bootstrap analysis
+    Initial bootstrap seed = generated automatically
+    Number of bootstrap replicates = 100
+  Tree model = multispecies coalescent (expected rank of flattening matrix for true tree = 10)
+  Using 2 parallel threads on 8 processors
+  Tree search:
+    Quartet assembly algorithm = QFM
+    Local search = none
+
+Quartet assembly completed:
+  Total weight of incompatible quartets = 0 (0.000%)
+  Total weight of compatible quartets   = 5 (100.000%)
+  Time used for QFM = 0.00 sec (CPU time = 0.00 sec)
+
+Tree from SVDQuartets analysis (also stored to tree buffer):
+
+                                                                                        /----------------------------- A
+                                                           /----------------------------+
+                                                           |                            \----------------------------- B
+                             /-----------------------------+
+/----------------------------+                             \---------------------------------------------------------- C
+|                            |
+|                            \---------------------------------------------------------------------------------------- D
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+Bootstrap 50% majority-rule consensus tree
+   (plus other groups compatible with this tree)
+
+                                                                                      /---------------------------- A(1)
+                                                         /------------100-------------+
+                                                         |                            \---------------------------- B(2)
+                             /------------67-------------+
+/----------------------------+                           \--------------------------------------------------------- C(3)
+|                            |
+|                            \------------------------------------------------------------------------------------- D(4)
+|
+\------------------------------------------------------------------------------------------------------------------ E(5)
+
+Bipartitions found in one or more trees and frequency of occurrence (bootstrap support values):
+
+12345          Freq
+-------------------
+..***           100
+...**            67
+..**.            25
+..*.*             8
+
+Bootstrap consensus tree stored to tree buffer (replacing previously stored tree)
+
+Time used for SVDQuartet analysis = 12.13 sec (CPU time = 12.15 sec)
+
+paup> !cat  astral_prep.py
+
+!!python2 astral_prep.py > run_astral.nex
+
+paup> execute run_astral.nex;
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/run_astral.nex" begins...
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/anomaly_zone.nex" begins...
+
+Are you sure you want to reset the active datafile? (Y/n)y
+
+Data read in DNA format
+
+Data matrix has 5 taxa, 5000000 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+
+Outgroup status changed:
+  1 taxon transferred to outgroup
+  Total number of taxa now in outgroup = 1
+  Number of ingroup taxa = 4
+
+Processing of input file "anomaly_zone.nex" completed.
+
+Character-exclusion status changed:
+  4999500 characters excluded
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.2952 C=0.1964 G=0.1776 T=0.3308
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.nkiv2p4B && raxmlHPC -s /tmp/paup.nkiv2p4B/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 1976237308
+
+Beginning RAxML tree search...
+
+| /bin/sh: raxmlHPC: command not found
+
+External command starting with 'raxmlHPC' terminated with error code 127
+
+RAxML search failed, return code = 127
+
+Processing of input file "run_astral.nex" terminated due to errors.
+
+paup> execute run_astral.nex;
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/run_astral.nex" begins...
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/anomaly_zone.nex" begins...
+
+Are you sure you want to reset the active datafile? (Y/n)y
+
+Data read in DNA format
+
+Data matrix has 5 taxa, 5000000 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+
+Outgroup status changed:
+  1 taxon transferred to outgroup
+  Total number of taxa now in outgroup = 1
+  Number of ingroup taxa = 4
+
+Processing of input file "anomaly_zone.nex" completed.
+
+Character-exclusion status changed:
+  4999500 characters excluded
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.2952 C=0.1964 G=0.1776 T=0.3308
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.O8nKxdzE && raxmlHPC -s /tmp/paup.O8nKxdzE/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 1546610934
+
+Beginning RAxML tree search...
+
+| /bin/sh: raxmlHPC: command not found
+
+External command starting with 'raxmlHPC' terminated with error code 127
+
+RAxML search failed, return code = 127
+
+Processing of input file "run_astral.nex" terminated due to errors.
+
+paup> execute run_astral.nex;
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/run_astral.nex" begins...
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/anomaly_zone.nex" begins...
+
+Are you sure you want to reset the active datafile? (Y/n)y
+
+Data read in DNA format
+
+Data matrix has 5 taxa, 5000000 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+
+Outgroup status changed:
+  1 taxon transferred to outgroup
+  Total number of taxa now in outgroup = 1
+  Number of ingroup taxa = 4
+
+Processing of input file "anomaly_zone.nex" completed.
+
+Character-exclusion status changed:
+  4999500 characters excluded
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.2952 C=0.1964 G=0.1776 T=0.3308
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.jJMqJQyL && raxmlHPC -s /tmp/paup.jJMqJQyL/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 649863447
+
+Beginning RAxML tree search...
+
+| /bin/sh: raxmlHPC: command not found
+
+External command starting with 'raxmlHPC' terminated with error code 127
+
+RAxML search failed, return code = 127
+
+Processing of input file "run_astral.nex" terminated due to errors.
+
+paup> !ls /tmp
+
+!
+
+paup> execute run_astral.nex;
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/run_astral.nex" begins...
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/anomaly_zone.nex" begins...
+
+Are you sure you want to reset the active datafile? (Y/n)y
+
+Data read in DNA format
+
+Data matrix has 5 taxa, 5000000 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+
+Outgroup status changed:
+  1 taxon transferred to outgroup
+  Total number of taxa now in outgroup = 1
+  Number of ingroup taxa = 4
+
+Processing of input file "anomaly_zone.nex" completed.
+
+Character-exclusion status changed:
+  4999500 characters excluded
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.2952 C=0.1964 G=0.1776 T=0.3308
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.5kW8CqfL && raxmlHPC -s /tmp/paup.5kW8CqfL/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 1505276774
+
+Beginning RAxML tree search...
+
+| /bin/sh: raxmlHPC: command not found
+
+External command starting with 'raxmlHPC' terminated with error code 127
+
+RAxML search failed, return code = 127
+
+Processing of input file "run_astral.nex" terminated due to errors.
+
+paup> !ls /tmp
+
+!
+
+paup> raxml ?
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+Usage: runRAxML [options...];
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+nRuns           <integer-value>                                    1
+bootstrap       no|yes                                             no
+nBootReps       <integer-value>                                    100
+pseed           <integer-value>                                   *1505276774
+bseed           <integer-value>                                   *0
+optPrecision    <real-value>                                       none
+algorithm       d|o                                                d
+cpartition      <charpartition-name>                               (none)
+otherOptions    "<other-RAxML-options>"                           *(none)
+showOutput      no|yes                                             yes
+showTree        no|yes                                             yes
+execute         <shell-command-to-invoke-RAxML>                    raxmlHPC
+keepTempDir     no|yes                                             no
+                                                                  *Option is nonpersistent
+
+paup> execute run_astral.nex;
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/run_astral.nex" begins...
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/anomaly_zone.nex" begins...
+
+Are you sure you want to reset the active datafile? (Y/n)y
+
+Data read in DNA format
+
+Data matrix has 5 taxa, 5000000 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+
+Outgroup status changed:
+  1 taxon transferred to outgroup
+  Total number of taxa now in outgroup = 1
+  Number of ingroup taxa = 4
+
+Processing of input file "anomaly_zone.nex" completed.
+
+Character-exclusion status changed:
+  4999500 characters excluded
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.2952 C=0.1964 G=0.1776 T=0.3308
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.8CPJMNNU && raxmlHPC -s /tmp/paup.8CPJMNNU/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 1702938128
+
+Beginning RAxML tree search...
+
+| /bin/sh: raxmlHPC: command not found
+
+External command starting with 'raxmlHPC' terminated with error code 127
+
+RAxML search failed, return code = 127
+
+Processing of input file "run_astral.nex" terminated due to errors.
+
+paup> execute run_astral.nex;
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/run_astral.nex" begins...
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/anomaly_zone.nex" begins...
+
+Are you sure you want to reset the active datafile? (Y/n)y
+
+Data read in DNA format
+
+Data matrix has 5 taxa, 5000000 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+
+Outgroup status changed:
+  1 taxon transferred to outgroup
+  Total number of taxa now in outgroup = 1
+  Number of ingroup taxa = 4
+
+Processing of input file "anomaly_zone.nex" completed.
+
+Character-exclusion status changed:
+  4999500 characters excluded
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.2952 C=0.1964 G=0.1776 T=0.3308
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.vqGguVTs && raxmlHPC -s /tmp/paup.vqGguVTs/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 394975123
+
+Beginning RAxML tree search...
+
+| Option -T does not have any effect with the sequential or parallel MPI version.
+| It is used to specify the number of threads for the Pthreads-based parallelization
+| 
+| Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs"
+| 
+| This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+| 
+| With greatly appreciated code contributions by:
+| Andre Aberer      (HITS)
+| Simon Berger      (HITS)
+| Alexey Kozlov     (HITS)
+| Kassian Kobert    (HITS)
+| David Dao         (KIT and HITS)
+| Sarah Lutteropp   (KIT and HITS)
+| Nick Pattengale   (Sandia)
+| Wayne Pfeiffer    (SDSC)
+| Akifumi S. Tanabe (NRIFS)
+| Charlie Taylor    (UF)
+| 
+| Alignment has 124 distinct alignment patterns
+| 
+| Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+| 
+| RAxML rapid hill-climbing mode
+| 
+| Using 1 distinct models/data partitions with joint branch length optimization
+| 
+| Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+| 
+| All free model parameters will be estimated by RAxML
+| GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+| 
+| GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+| 
+| Partition: 0
+| Alignment Patterns: 124
+| Name: No Name Provided
+| DataType: DNA
+| Substitution Matrix: GTR
+| 
+| RAxML was called as follows:
+| 
+| raxmlHPC -s /tmp/paup.vqGguVTs/paupdata.txt -m GTRGAMMA -T 2 -n paup -f d -N 1 -p 394975123
+| 
+| Partition: 0 with name: No Name Provided
+| Base frequencies: 0.295 0.196 0.178 0.331
+| 
+| Inference[0]: Time 0.022614 GAMMA-based likelihood -1981.614566, best rearrangement setting 2
+| 
+| Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+| 
+| Inference[0] final GAMMA-based Likelihood: -1981.565136 tree written to file
+| /private/tmp/paup.vqGguVTs/RAxML_result.paup
+| 
+| Starting final GAMMA-based thorough Optimization on tree 0 likelihood -1981.565136 ....
+| 
+| Final GAMMA-based Score of best tree -1981.565136
+| 
+| Program execution info written to /private/tmp/paup.vqGguVTs/RAxML_info.paup
+| Best-scoring ML tree written to: /private/tmp/paup.vqGguVTs/RAxML_bestTree.paup
+| 
+| Overall execution time: 0.030604 secs or 0.000009 hours or 0.000000 days
+| 
+
+Tree from RAxML (also stored in tree buffer):
+
+                                                                                                       /-------------- A
+                                                                                                       |
+                                                          /--------------------------------------------+/-------- B
+                                                          |                                            \+
+/---------------------------------------------------------+                                             \------ C
+|                                                         |
+|                                                         \----------------------- D
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+1 tree appended to file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/az_tree.tre" in raw Newick format
+
+Character-exclusion status changed:
+  500 characters excluded
+  500 characters re-included
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.284 C=0.2176 G=0.1948 T=0.3036
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.ZJUUrj5K && raxmlHPC -s /tmp/paup.ZJUUrj5K/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 703547005
+
+Beginning RAxML tree search...
+
+| Option -T does not have any effect with the sequential or parallel MPI version.
+| It is used to specify the number of threads for the Pthreads-based parallelization
+| 
+| Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs"
+| 
+| This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+| 
+| With greatly appreciated code contributions by:
+| Andre Aberer      (HITS)
+| Simon Berger      (HITS)
+| Alexey Kozlov     (HITS)
+| Kassian Kobert    (HITS)
+| David Dao         (KIT and HITS)
+| Sarah Lutteropp   (KIT and HITS)
+| Nick Pattengale   (Sandia)
+| Wayne Pfeiffer    (SDSC)
+| Akifumi S. Tanabe (NRIFS)
+| Charlie Taylor    (UF)
+| 
+| Alignment has 143 distinct alignment patterns
+| 
+| Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+| 
+| RAxML rapid hill-climbing mode
+| 
+| Using 1 distinct models/data partitions with joint branch length optimization
+| 
+| Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+| 
+| All free model parameters will be estimated by RAxML
+| GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+| 
+| GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+| 
+| Partition: 0
+| Alignment Patterns: 143
+| Name: No Name Provided
+| DataType: DNA
+| Substitution Matrix: GTR
+| 
+| RAxML was called as follows:
+| 
+| raxmlHPC -s /tmp/paup.ZJUUrj5K/paupdata.txt -m GTRGAMMA -T 2 -n paup -f d -N 1 -p 703547005
+| 
+| Partition: 0 with name: No Name Provided
+| Base frequencies: 0.284 0.218 0.195 0.304
+| 
+| Inference[0]: Time 0.039305 GAMMA-based likelihood -2093.952042, best rearrangement setting 2
+| 
+| Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+| 
+| Inference[0] final GAMMA-based Likelihood: -2093.896650 tree written to file
+| /private/tmp/paup.ZJUUrj5K/RAxML_result.paup
+| 
+| Starting final GAMMA-based thorough Optimization on tree 0 likelihood -2093.896650 ....
+| 
+| Final GAMMA-based Score of best tree -2093.896650
+| 
+| Program execution info written to /private/tmp/paup.ZJUUrj5K/RAxML_info.paup
+| Best-scoring ML tree written to: /private/tmp/paup.ZJUUrj5K/RAxML_bestTree.paup
+| 
+| Overall execution time: 0.045968 secs or 0.000013 hours or 0.000001 days
+| 
+
+Tree from RAxML (also stored in tree buffer):
+
+                                                                                                  /----------- A
+                                                                                           /------+
+                                                                                           |      \----- C
+/------------------------------------------------------------------------------------------+
+|                                                                                          |       /-------------- B
+|                                                                                          \-------+
+|                                                                                                  \------------------ D
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+1 tree appended to file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/az_tree.tre" in raw Newick format
+
+Character-exclusion status changed:
+  500 characters excluded
+  500 characters re-included
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.276 C=0.2044 G=0.2104 T=0.3092
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.UsCN9J0K && raxmlHPC -s /tmp/paup.UsCN9J0K/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 1213562072
+
+Beginning RAxML tree search...
+
+| Option -T does not have any effect with the sequential or parallel MPI version.
+| It is used to specify the number of threads for the Pthreads-based parallelization
+| 
+| Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs"
+| 
+| This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+| 
+| With greatly appreciated code contributions by:
+| Andre Aberer      (HITS)
+| Simon Berger      (HITS)
+| Alexey Kozlov     (HITS)
+| Kassian Kobert    (HITS)
+| David Dao         (KIT and HITS)
+| Sarah Lutteropp   (KIT and HITS)
+| Nick Pattengale   (Sandia)
+| Wayne Pfeiffer    (SDSC)
+| Akifumi S. Tanabe (NRIFS)
+| Charlie Taylor    (UF)
+| 
+| Alignment has 122 distinct alignment patterns
+| 
+| Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+| 
+| RAxML rapid hill-climbing mode
+| 
+| Using 1 distinct models/data partitions with joint branch length optimization
+| 
+| Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+| 
+| All free model parameters will be estimated by RAxML
+| GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+| 
+| GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+| 
+| Partition: 0
+| Alignment Patterns: 122
+| Name: No Name Provided
+| DataType: DNA
+| Substitution Matrix: GTR
+| 
+| RAxML was called as follows:
+| 
+| raxmlHPC -s /tmp/paup.UsCN9J0K/paupdata.txt -m GTRGAMMA -T 2 -n paup -f d -N 1 -p 1213562072
+| 
+| Partition: 0 with name: No Name Provided
+| Base frequencies: 0.276 0.204 0.210 0.309
+| 
+| Inference[0]: Time 0.022186 GAMMA-based likelihood -1972.354042, best rearrangement setting 2
+| 
+| Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+| 
+| Inference[0] final GAMMA-based Likelihood: -1972.279118 tree written to file
+| /private/tmp/paup.UsCN9J0K/RAxML_result.paup
+| 
+| Starting final GAMMA-based thorough Optimization on tree 0 likelihood -1972.279118 ....
+| 
+| Final GAMMA-based Score of best tree -1972.279118
+| 
+| Program execution info written to /private/tmp/paup.UsCN9J0K/RAxML_info.paup
+| Best-scoring ML tree written to: /private/tmp/paup.UsCN9J0K/RAxML_bestTree.paup
+| 
+| Overall execution time: 0.027345 secs or 0.000008 hours or 0.000000 days
+| 
+
+Tree from RAxML (also stored in tree buffer):
+
+                                                                                       /-- A
+                                                                                       |
+/--------------------------------------------------------------------------------------+                  /----------- B
+|                                                                                      |             /----+
+|                                                                                      |             |    \----- D
+|                                                                                      \-------------+
+|                                                                                                    \------------- C
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+1 tree appended to file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/az_tree.tre" in raw Newick format
+
+Character-exclusion status changed:
+  500 characters excluded
+  500 characters re-included
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.3436 C=0.1868 G=0.2012 T=0.2684
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.EsBdHfH9 && raxmlHPC -s /tmp/paup.EsBdHfH9/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 1067270570
+
+Beginning RAxML tree search...
+
+| Option -T does not have any effect with the sequential or parallel MPI version.
+| It is used to specify the number of threads for the Pthreads-based parallelization
+| 
+| Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs"
+| 
+| This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+| 
+| With greatly appreciated code contributions by:
+| Andre Aberer      (HITS)
+| Simon Berger      (HITS)
+| Alexey Kozlov     (HITS)
+| Kassian Kobert    (HITS)
+| David Dao         (KIT and HITS)
+| Sarah Lutteropp   (KIT and HITS)
+| Nick Pattengale   (Sandia)
+| Wayne Pfeiffer    (SDSC)
+| Akifumi S. Tanabe (NRIFS)
+| Charlie Taylor    (UF)
+| 
+| Alignment has 113 distinct alignment patterns
+| 
+| Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+| 
+| RAxML rapid hill-climbing mode
+| 
+| Using 1 distinct models/data partitions with joint branch length optimization
+| 
+| Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+| 
+| All free model parameters will be estimated by RAxML
+| GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+| 
+| GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+| 
+| Partition: 0
+| Alignment Patterns: 113
+| Name: No Name Provided
+| DataType: DNA
+| Substitution Matrix: GTR
+| 
+| RAxML was called as follows:
+| 
+| raxmlHPC -s /tmp/paup.EsBdHfH9/paupdata.txt -m GTRGAMMA -T 2 -n paup -f d -N 1 -p 1067270570
+| 
+| Partition: 0 with name: No Name Provided
+| Base frequencies: 0.344 0.187 0.201 0.268
+| 
+| Inference[0]: Time 0.020358 GAMMA-based likelihood -1892.110271, best rearrangement setting 2
+| 
+| Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+| 
+| Inference[0] final GAMMA-based Likelihood: -1891.899458 tree written to file
+| /private/tmp/paup.EsBdHfH9/RAxML_result.paup
+| 
+| Starting final GAMMA-based thorough Optimization on tree 0 likelihood -1891.899458 ....
+| 
+| Final GAMMA-based Score of best tree -1891.899458
+| 
+| Program execution info written to /private/tmp/paup.EsBdHfH9/RAxML_info.paup
+| Best-scoring ML tree written to: /private/tmp/paup.EsBdHfH9/RAxML_bestTree.paup
+| 
+| Overall execution time: 0.027260 secs or 0.000008 hours or 0.000000 days
+| 
+
+Tree from RAxML (also stored in tree buffer):
+
+                                                                                                      /----- A
+                                                                                                    /-+
+                                                                                                    | \--------------- C
+                                                                                              /-----+
+/---------------------------------------------------------------------------------------------+     \----- B
+|                                                                                             |
+|                                                                                             \ D
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+1 tree appended to file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/az_tree.tre" in raw Newick format
+
+Character-exclusion status changed:
+  500 characters excluded
+  500 characters re-included
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.2852 C=0.1916 G=0.1996 T=0.3236
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.AJnuatSH && raxmlHPC -s /tmp/paup.AJnuatSH/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 991001699
+
+Beginning RAxML tree search...
+
+| Option -T does not have any effect with the sequential or parallel MPI version.
+| It is used to specify the number of threads for the Pthreads-based parallelization
+| 
+| Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs"
+| 
+| This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+| 
+| With greatly appreciated code contributions by:
+| Andre Aberer      (HITS)
+| Simon Berger      (HITS)
+| Alexey Kozlov     (HITS)
+| Kassian Kobert    (HITS)
+| David Dao         (KIT and HITS)
+| Sarah Lutteropp   (KIT and HITS)
+| Nick Pattengale   (Sandia)
+| Wayne Pfeiffer    (SDSC)
+| Akifumi S. Tanabe (NRIFS)
+| Charlie Taylor    (UF)
+| 
+| Alignment has 134 distinct alignment patterns
+| 
+| Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+| 
+| RAxML rapid hill-climbing mode
+| 
+| Using 1 distinct models/data partitions with joint branch length optimization
+| 
+| Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+| 
+| All free model parameters will be estimated by RAxML
+| GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+| 
+| GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+| 
+| Partition: 0
+| Alignment Patterns: 134
+| Name: No Name Provided
+| DataType: DNA
+| Substitution Matrix: GTR
+| 
+| RAxML was called as follows:
+| 
+| raxmlHPC -s /tmp/paup.AJnuatSH/paupdata.txt -m GTRGAMMA -T 2 -n paup -f d -N 1 -p 991001699
+| 
+| Partition: 0 with name: No Name Provided
+| Base frequencies: 0.285 0.192 0.200 0.324
+| 
+| Inference[0]: Time 0.026675 GAMMA-based likelihood -2054.674855, best rearrangement setting 2
+| 
+| Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+| 
+| Inference[0] final GAMMA-based Likelihood: -2054.639600 tree written to file
+| /private/tmp/paup.AJnuatSH/RAxML_result.paup
+| 
+| Starting final GAMMA-based thorough Optimization on tree 0 likelihood -2054.639600 ....
+| 
+| Final GAMMA-based Score of best tree -2054.639600
+| 
+| Program execution info written to /private/tmp/paup.AJnuatSH/RAxML_info.paup
+| Best-scoring ML tree written to: /private/tmp/paup.AJnuatSH/RAxML_bestTree.paup
+| 
+| Overall execution time: 0.034115 secs or 0.000009 hours or 0.000000 days
+| 
+
+Tree from RAxML (also stored in tree buffer):
+
+                                                                                                            /-------- A
+                                                                                                      /-----+
+                                                                                                      |     \--------- C
+                                                                                        /-------------+
+/---------------------------------------------------------------------------------------+             \-------------- D
+|                                                                                       |
+|                                                                                       \-------- B
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+1 tree appended to file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/az_tree.tre" in raw Newick format
+
+Character-exclusion status changed:
+  500 characters excluded
+  500 characters re-included
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+RAxML search requested.
+
+Current model settings =
+                         Data type = nucleotide
+            DNA substitution types = 6
+                 Exchangeabilities = AC=0.991723 AG=2.90734 AT=1.00935 CG=0.996446 CT=5.71855 GT=1
+                 State frequencies = empirical: A=0.3124 C=0.18 G=0.2264 T=0.2812
+    Proportion of invariable sites = none
+           Rates at variable sites = gamma, shape=0.434899 (4 categories [mean])
+              Model correspondence = GTR+G
+
+----- Note: Current model settings for PAUP* are for a fixed gamma shape parameter, but RAxML only supports ML
+            estimation of this parameter.  Be sure to specify shape=estimate in PAUP* to compare likelihoods.
+
+----- Note: Current model settings for PAUP* are for a fixed 6ST rate matrix, but RAxML only supports ML estimation of
+            the rate matrix parameters.  Be sure to specify rmatrix=estimate in PAUP* to compare likelihoods.
+
+Starting RAxML with command line: cd /tmp/paup.I55mddKb && raxmlHPC -s /tmp/paup.I55mddKb/paupdata.txt -m GTRGAMMA -T 2
+-n paup -f d -N 1 -p 1888229567
+
+Beginning RAxML tree search...
+
+| Option -T does not have any effect with the sequential or parallel MPI version.
+| It is used to specify the number of threads for the Pthreads-based parallelization
+| 
+| Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs"
+| 
+| This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+| 
+| With greatly appreciated code contributions by:
+| Andre Aberer      (HITS)
+| Simon Berger      (HITS)
+| Alexey Kozlov     (HITS)
+| Kassian Kobert    (HITS)
+| David Dao         (KIT and HITS)
+| Sarah Lutteropp   (KIT and HITS)
+| Nick Pattengale   (Sandia)
+| Wayne Pfeiffer    (SDSC)
+| Akifumi S. Tanabe (NRIFS)
+| Charlie Taylor    (UF)
+| 
+| Alignment has 132 distinct alignment patterns
+| 
+| Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+| 
+| RAxML rapid hill-climbing mode
+| 
+| Using 1 distinct models/data partitions with joint branch length optimization
+| 
+| Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+| 
+| All free model parameters will be estimated by RAxML
+| GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+| 
+| GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+| 
+| Partition: 0
+| Alignment Patterns: 132
+| Name: No Name Provided
+| DataType: DNA
+| Substitution Matrix: GTR
+| 
+| RAxML was called as follows:
+| 
+| raxmlHPC -s /tmp/paup.I55mddKb/paupdata.txt -m GTRGAMMA -T 2 -n paup -f d -N 1 -p 1888229567
+| 
+| Partition: 0 with name: No Name Provided
+| Base frequencies: 0.312 0.180 0.226 0.281
+| 
+| Inference[0]: Time 0.018860 GAMMA-based likelihood -2047.359909, best rearrangement setting 2
+| 
+| Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+| 
+| Inference[0] final GAMMA-based Likelihood: -2047.356794 tree written to file
+| /private/tmp/paup.I55mddKb/RAxML_result.paup
+| 
+| Starting final GAMMA-based thorough Optimization on tree 0 likelihood -2047.356794 ....
+| 
+| Final GAMMA-based Score of best tree -2047.356794
+| 
+| Program execution info written to /private/tmp/paup.I55mddKb/RAxML_info.paup
+| Best-scoring ML tree written to: /private/tmp/paup.I55mddKb/RAxML_bestTree.paup
+| 
+| Overall execution time: 0.023727 secs or 0.000007 hours or 0.000000 days
+| 
+
+Tree from RAxML (also stored in tree buffer):
+
+                                                                                                   /-------------- A
+                                                                                                /--+
+                                                                                                |  \-------------- C
+                                                                                      /---------+
+/-------------------------------------------------------------------------------------+         \--------------------- B
+|                                                                                     |
+|                                                                                     \----------- D
+|
+\--------------------------------------------------------------------------------------------------------------------- E
+
+1 tree appended to file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial/az_tree.tre" in raw Newick format
+
+Character-exclusion status changed:
+  500 characters excluded
+  500 characters re-included
+  Total number of characters now excluded = 4999500
+  Number of included characters = 500
+
+Note: The 'RAxMLSearch' command has been renamed.  Use 'runRAxML' instead.
+
+Do you really want to stop the search? (Y/n)y
+
+Processing of input file "run_astral.nex" terminated due to errors.
+
+paup> quit

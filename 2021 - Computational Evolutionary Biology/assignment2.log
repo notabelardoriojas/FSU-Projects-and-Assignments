@@ -1,0 +1,402 @@
+
+P A U P *
+Version 4.0a (build 168) for Unix/Linux (built on Aug  2 2020 at 07:23:11)
+Tue Oct  5 13:43:44 2021
+
+
+paup> set crit=like
+
+Optimality criterion set to likelihood.
+
+paup> lset variant=HKY
+
+paup> nj
+
+Error(#210): The 'nj' command is only valid when an active DATA or CHARACTERS block exists.
+                 You first need to execute a file containing one of these blocks.
+
+paup> execute primate-mtDNA.nex 
+
+Processing of file "~/Desktop/assignment 2/primate-mtDNA.nex" begins...
+
+Data from:
+    Hayasaka, K., T. Gojobori, and S. Horai. 1988. Molecular phylogeny
+        and evolution of primate mitochondrial DNA. Mol. Biol. Evol.
+        5:626-644.
+
+Data read in DNA format
+
+Data matrix has 12 taxa, 898 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+Gaps identified by '-'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+Character-state symbol '.' matches state in first taxon
+
+Processing of input file "primate-mtDNA.nex" completed.
+
+paup> nj
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = uncorrected ("p")
+  898 characters are included
+  All characters have equal weight
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/------------------------------------------------------------------------------------------- Lemur catta
+|
+|                                                                                                                               /------------------------------------ Homo sapiens
+|                                                                                                                        /------+
+|                                                                                                                        |      \----------------------------------------- Pan
+|                                                                                             /--------------------------+
+|                                                                                  /----------+                          \--------------------------------------------- Gorilla
+|                                                                                  |          |
+|                                                          /-----------------------+          \------------------------------------------------------------------------ Pongo
+|                                                          |                       |
+|                                                          |                       \------------------------------------------------------------------------------ Hylobates
+|                                                          |
+|                                           /--------------+                                                                                         /--------------- Macaca fuscata
+|                                           |              |                                                                       /-----------------+
+|                                           |              |                                                                       |                 \----------------- M. mulatta
+|                                           |              |                                                       /---------------+
+|         /---------------------------------+              \-------------------------------------------------------+               \------------------------------------------- M. fascicularis
+|         |                                 |                                                                      |
+|         |                                 |                                                                      \---------------------------------------------------- M. sylvanus
+\---------+                                 |
+          |                                 \----------------------------------------------------------------------------------------------------------------------- Saimiri sciureus
+          |
+          \--------------------------------------------------------------------------------------------------------------------- Tarsius syrichta
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> lscore
+
+Likelihood scores of tree(s) in memory:
+---------------------------------------
+  898 characters are included
+  All characters have equal weight
+  Likelihood settings:
+    Current model:
+                             Data type = nucleotide
+                DNA substitution types = 2 (HKY85 variant)
+                           Ti/tv ratio = 2
+                     State frequencies = empirical: A=0.324121 C=0.30402 G=0.105528 T=0.266332
+        Proportion of invariable sites = none
+               Rates at variable sites = equal
+                  Model correspondence = HKY85
+
+    Number of distinct data patterns under this model = 413
+    Molecular clock not enforced
+    Starting branch lengths obtained using Rogers-Swofford approximation method
+    Branch-length optimization = one-dimensional Newton-Raphson with pass limit=20, tolerance=1e-07
+    Likelihood calculations performed in single precision
+    Vector processing enabled
+    Using standard Felsenstein pruning for computing likelihoods
+    Conditional-likelihood rescaling threshold = 1e-20
+    Using 1 thread on 6 processors
+
+Tree             1
+------------------
+-ln L     5988.059
+
+Time used to compute likelihoods = 0.00 sec (CPU time = 0.00 sec)
+
+paup> help lset
+
+Usage: lset [model=<model-name>] [fixAllParams | estAllParams] [options...];
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+NST             1|2|6                                              2
+tratio          <real-value>|estimate|previous                     2
+kappa           <real-value>|estimate|previous                     1
+rmatrix         (<rAC><rAG><rAT><rCG><rCT>)|estimate|previous      (1 1 1 1 1)
+rclass          (<cAC><cAG><cAT><cCG><cCT><cGT>)                   '(abcdef)'
+variant         HKY|F84                                            HKY
+baseFreq        empirical|equal|estimate|previous|
+                (<frqA><frqC><frqG>)                               empirical
+rates           equal|gamma|siteSpec                               equal
+shape           <real-value>|estimate|previous                     0.5
+ncat            <integer-value>                                    4
+repRate         mean|median                                        mean
+pinvar          <real-value>|estimate|previous                     0
+siteRates       partition[:<charpartition-name>]|
+                rateset[:<rateset-name>]|previous                  (none)
+mpartition      <modelpartition-name>                              (none)
+modelRates      estimate|previous|equal                            (none)
+mtype           Dna|AA|codon                                       Dna
+initBrLen       rogers|acctranRog|LS|<real-value>                  Rogers
+scoreDigits     <integer-value>|auto                               auto
+lCollapse       no|yes                                             yes
+maxPass         <integer-value>                                    20
+spToler         <real-value>                                       1e-07
+dpToler         <real-value>                                       1e-10
+approxLim       <real-value>|none                                  5
+adjustAppLim    no|yes                                             yes
+logIter         no|yes                                             no
+zeroLenTest     no|full|crude                                      no
+recon           marginal|joint                                     marginal
+allProbs        no|yes                                             no
+clock           no|yes                                             no
+userBrLens      no|yes                                             no
+startVals       parsApprox|arbitrary                               parsApprox
+paramClock      Thorne|relAge|Rambaut                              Thorne
+mlDistforLS     no|yes                                             no
+showQMatrix     no|yes                                             no
+fastStep        no|yes                                             yes
+optimizer       Praxis|LBFGS                                       LBFGS
+blopt           newton1D|brent1D|multiDim                          newton1D
+clRescale       <real-value>                                       1e-20
+gRateScale      <real-value>|estimate|previous                     1
+condVar         no|yes|auto                                        auto
+precision       double|single                                      single
+vectorize       no|yes                                             yes
+nthreads        <integer-value>|auto                               1
+
+Options for (unfinished) codon models:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+codonFreq       equal|F1x4|F3x4|CF3x4|F6n|estimate|previous|
+                (<frqAAA>,<frqAAC>,...,<frqTTT>)                   none
+genCode         <genetic-code-name>                                standard
+stopCodons      missing|error                                      error
+omega           <real-value>|estimate|previous                     1
+
+Options for amino-acid models:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+aaFreq          empirical|equal|estimate|previous|(<list>)|
+                Intrinsic                                          empirical
+aaRMatrix       (<rAC>...<rYV>)|estimate|previous|oneST|JTT|
+                JTTPAML|PAM|MTrev24|WAG|WAGstar|LG                 JTT
+
+Options for generic k-state models ("standard" data):
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+mkStateSpace    variable|fixed                                     variable
+genFreq         empirical|equal|estimate|previous|(<list>)         empirical
+genRmatrix      (<r01><r02>...)|estimate|previous|oneST            oneST
+genRclass       (<c01><c02>...)|fullrev                            fullrev
+
+The following options pertain only to Beagle-enabled versions:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+useBeagle       no|GPU|CPU|<resource-number>                       no
+invarSiteMem    compact|fullStore                                  compact
+
+The following options are for DLS research only:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+useDecomp       no|yes                                             no
+minPatPerThd    <integer-value>                                    32
+
+paup> lset tratio=estimate rmatrix=estimate shape=estimate baseFreq=estimate pinvar=estimate modelRates=estimate
+
+paup> help hsearch
+
+Usage: hsearch [options...];
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+swap            none|NNI|SPR|TBR                                   TBR
+keep            <real-value>|No                                    No
+mulTrees        no|yes                                             yes
+writeCurTree    no|yes                                             no
+enforce         no|yes                                             no
+constraints     <constraint-name>                                  ch
+converse        no|yes                                             no
+reconLimit      <integer-value>|infinity                           8
+nchuck          <integer-value>                                    0
+chuckScore      <real-value>|No                                    No
+start           stepwise|NJ|current|<tree-number>[-<tree-number>] *Stepwise
+addSeq          simple|closest|asIs|random|furthest                simple
+nreps           <integer-value>                                    10
+rseed           <int> or <int:int:int:int>                         0
+rstatus         no|yes                                             no
+saveReps        no|yes                                             no
+refTax          <integer-value>                                    0
+hold            <integer-value>|No                                 1
+nbest           <integer-value>|all                                all
+allSwap         no|yes                                             no
+useNonMin       no|yes                                             no
+steepest        no|yes                                             no
+abortRep        no|yes                                             no
+retain          no|yes                                            *no
+statusWin       no|yes                                             yes
+dStatus         <integer-value>|none                               60
+randomize       addSeq|trees                                       addSeq
+timeLimit       <integer-value>|none                               none
+rearrLimit      <integer-value>|none                               none
+limitPerRep     no|yes                                             no
+                                                                  *Option is nonpersistent
+
+paup> hsearch
+
+Heuristic search settings:
+  Optimality criterion = likelihood
+    898 characters are included
+    All characters have equal weight
+    Likelihood settings:
+      Current model:
+                               Data type = nucleotide
+                  DNA substitution types = 2 (HKY85 variant)
+                             Ti/tv ratio = estimated
+                       State frequencies = estimated
+          Proportion of invariable sites = estimated
+                 Rates at variable sites = equal
+                    Model correspondence = HKY85+I
+
+      Number of distinct data patterns under this model = 413
+      Molecular clock not enforced
+      Starting branch lengths obtained using Rogers-Swofford approximation method
+      Trees with approximate log likelihoods 5% or further from the target score are rejected without additional iteration
+      Branch-length optimization = one-dimensional Newton-Raphson with pass limit=20, tolerance=1e-07
+      Multidimensional optimizer = Praxis (tol=0.0001)
+      Likelihood calculations performed in single precision
+      Vector processing enabled
+      Using standard Felsenstein pruning for computing likelihoods
+      Conditional-likelihood rescaling threshold = 1e-20
+      Using 1 thread on 6 processors
+
+  Starting tree(s) obtained via stepwise addition
+    Addition sequence: as-is
+    Number of trees held at each step = 1
+  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+    Steepest descent option not in effect
+  Initial 'Maxtrees' setting = 100
+  Branches collapsed (creating polytomies) if branch length is less than or equal to 1e-08
+  'MulTrees' option in effect
+  No topological constraints in effect
+  Trees are unrooted
+
+Do you really want to stop the search? (Y/n)n
+
+Heuristic search completed
+  Total number of rearrangements tried = 560
+  Score of best tree(s) found = 5768.004
+  Number of trees retained = 1
+  Time used = 00:02:13 (CPU time = 00:02:10.2)
+
+paup> saveTrees file=hky_abelardoriojas.tre
+
+1 tree saved to file "~/Desktop/assignment 2/hky_abelardoriojas.tre"
+
+paup> lset NST=6
+
+paup> dset distance=GTR
+
+paup> lscore
+
+Likelihood scores of tree(s) in memory:
+---------------------------------------
+  898 characters are included
+  All characters have equal weight
+  Likelihood settings:
+    Current model:
+                             Data type = nucleotide
+                DNA substitution types = 6
+                     Exchangeabilities = estimated
+           GTR submodel classification = unrestricted
+                     State frequencies = estimated
+        Proportion of invariable sites = estimated
+               Rates at variable sites = equal
+                  Model correspondence = GTR+I
+
+    Number of distinct data patterns under this model = 413
+    Molecular clock not enforced
+    Starting branch lengths obtained using Rogers-Swofford approximation method
+    Branch-length optimization = one-dimensional Newton-Raphson with pass limit=20, tolerance=1e-07
+    Multidimensional optimizer = Praxis (tol=0.0001)
+    Likelihood calculations performed in single precision
+    Vector processing enabled
+    Using standard Felsenstein pruning for computing likelihoods
+    Conditional-likelihood rescaling threshold = 1e-20
+    Using 1 thread on 6 processors
+
+Tree             1
+------------------
+-ln L     5757.217
+Base frequencies:
+  A       0.336735
+  C       0.307588
+  G       0.091693
+  T       0.263983
+Exchangeabilities (R):
+  AC       5.46523
+  AG      31.13630
+  AT       3.47729
+  CG       2.34742
+  CT      25.74614
+  GT       1.00000
+P_inv     0.372867
+
+Time used to compute likelihoods = 0.37 sec (CPU time = 0.38 sec)
+
+paup> hsearch
+
+Heuristic search settings:
+  Optimality criterion = likelihood
+    898 characters are included
+    All characters have equal weight
+    Likelihood settings:
+      Current model:
+                               Data type = nucleotide
+                  DNA substitution types = 6
+                       Exchangeabilities = estimated
+             GTR submodel classification = unrestricted
+                       State frequencies = estimated
+          Proportion of invariable sites = estimated
+                 Rates at variable sites = equal
+                    Model correspondence = GTR+I
+
+      Number of distinct data patterns under this model = 413
+      Molecular clock not enforced
+      Starting branch lengths obtained using Rogers-Swofford approximation method
+      Trees with approximate log likelihoods 5% or further from the target score are rejected without additional iteration
+      Branch-length optimization = one-dimensional Newton-Raphson with pass limit=20, tolerance=1e-07
+      Multidimensional optimizer = Praxis (tol=0.0001)
+      Likelihood calculations performed in single precision
+      Vector processing enabled
+      Using standard Felsenstein pruning for computing likelihoods
+      Conditional-likelihood rescaling threshold = 1e-20
+      Using 1 thread on 6 processors
+
+  Starting tree(s) obtained via stepwise addition
+    Addition sequence: as-is
+    Number of trees held at each step = 1
+  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+    Steepest descent option not in effect
+  Initial 'Maxtrees' setting = 100
+  Branches collapsed (creating polytomies) if branch length is less than or equal to 1e-08
+  'MulTrees' option in effect
+  No topological constraints in effect
+  Trees are unrooted
+
+Do you really want to stop the search? (Y/n)n
+
+Heuristic search completed
+  Total number of rearrangements tried = 560
+  Score of best tree(s) found = 5757.217
+  Number of trees retained = 1
+  Time used = 00:03:52 (CPU time = 00:03:50.8)
+
+paup> saveTrees file=gtr_abelardoriojas.tre
+
+1 tree saved to file "~/Desktop/assignment 2/gtr_abelardoriojas.tre"

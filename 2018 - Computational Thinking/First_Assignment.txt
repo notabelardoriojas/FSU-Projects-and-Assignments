@@ -1,0 +1,8 @@
+This is the link to my plot:
+https://plot.ly/~notabelardoriojas/1/
+
+
+Question two: This course is my first step in a long series of steps in becoming a future Computational Scientist! So far, I'm really excited with the career path I've chosen. 
+
+Question three: I've always had an understand of how computer algorithms work from a layman's perspective. I've read up on the fundamentals of machine learning, sorting algorithms, the algorithms behind wolframalpha, etc. I want to come out of this class with a finer understanding of algorithims, beyond the layperson.
+  

@@ -1,0 +1,165 @@
+
+P A U P *
+Version 4.0a (build 168) for Unix/Linux (built on Aug  2 2020 at 07:23:11)
+Tue Oct 19 13:48:44 2021
+
+
+paup> svdq evalq=all taxpartition=species;
+
+Error(#210): The 'svdQuartets' command is only valid when an active DATA or CHARACTERS block exists.
+                 You first need to execute a file containing one of these blocks.
+
+paup> execute canids.nex
+
+Processing of file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial_actual/canids.nex" begins...
+
+Data read in nucleotide format
+
+Data matrix has 16 taxa, 10835 characters
+Valid character-state symbols: ACGT
+Missing data identified by '?'
+Gaps identified by '-'
+"Equate" macros in effect:
+   R,r ==> {AG}
+   Y,y ==> {CT}
+   M,m ==> {AC}
+   K,k ==> {GT}
+   S,s ==> {CG}
+   W,w ==> {AT}
+   H,h ==> {ACT}
+   B,b ==> {CGT}
+   V,v ==> {ACG}
+   D,d ==> {AGT}
+   N,n ==> {ACGT}
+
+Outgroup status changed:
+  4 taxa transferred to outgroup
+  Total number of taxa now in outgroup = 4
+  Number of ingroup taxa = 12
+
+Processing of input file "canids.nex" completed.
+
+paup> svdq evalq=all taxpartition=species;
+
+Analysis using SVDQuartets method
+
+  Number of taxa (lineages) in the analysis = 16
+  Tips assigned to species using taxon partition 'species'
+  Quartet sampling = exhaustive (1120 quartets)
+  Tree model = multispecies coalescent (expected rank of flattening matrix for true tree = 10)
+  Using 2 parallel threads on 6 processors
+  Tree search:
+    Quartet assembly algorithm = QFM
+    Local search = none
+
+Quartet assembly completed:
+  Total weight of incompatible quartets = 4.1875 (5.982%)
+  Total weight of compatible quartets   = 65.8125 (94.018%)
+  Time used for QFM = 0.01 sec (CPU time = 0.00 sec)
+
+Tree from SVDQuartets analysis (also stored to tree buffer):
+
+                                                                                                                                                     /------------------------------ sidestriped jackal
+/----------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                    \------------------------------ blackbacked jackal
+|
+|                                                                                                                                                    /------------------------------ African golden wolf
+|                                                                                                                      /-----------------------------+
+|                                                                                                                      |                             \------------------------------ gray wolf
+|                                                                                         /----------------------------+
+|                                                           /-----------------------------+                            \------------------------------------------------------------ coyote
+|                                                           |                             |
+|                             /-----------------------------+                             \----------------------------------------------------------------------------------------- Ethiopian wolf
+|                             |                             |
+\-----------------------------+                             \----------------------------------------------------------------------------------------------------------------------- Dhole
+                              |
+                              \----------------------------------------------------------------------------------------------------------------------------------------------------- African wild dog
+
+Time used for SVDQuartet analysis = 0.09 sec (CPU time = 0.18 sec)
+
+paup> svdq evalq=all taxpartition=species bootstrap=multilocus loci=combined;
+
+Analysis using SVDQuartets method
+
+  Number of taxa (lineages) in the analysis = 16
+  Tips assigned to species using taxon partition 'species'
+  Quartet sampling = exhaustive (1120 quartets)
+  Doing multilocus bootstrap analysis using character partition 'combined' to designate loci
+    Initial bootstrap seed = generated automatically
+    Number of bootstrap replicates = 100
+  Tree model = multispecies coalescent (expected rank of flattening matrix for true tree = 10)
+  Using 2 parallel threads on 6 processors
+  Tree search:
+    Quartet assembly algorithm = QFM
+    Local search = none
+
+Quartet assembly completed:
+  Total weight of incompatible quartets = 4.1875 (5.982%)
+  Total weight of compatible quartets   = 65.8125 (94.018%)
+  Time used for QFM = 0.00 sec (CPU time = 0.00 sec)
+
+Tree from SVDQuartets analysis (also stored to tree buffer):
+
+                                                                                                                                                     /------------------------------ sidestriped jackal
+/----------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                    \------------------------------ blackbacked jackal
+|
+|                                                                                                                                                    /------------------------------ African golden wolf
+|                                                                                                                      /-----------------------------+
+|                                                                                                                      |                             \------------------------------ gray wolf
+|                                                                                         /----------------------------+
+|                                                           /-----------------------------+                            \------------------------------------------------------------ coyote
+|                                                           |                             |
+|                             /-----------------------------+                             \----------------------------------------------------------------------------------------- Ethiopian wolf
+|                             |                             |
+\-----------------------------+                             \----------------------------------------------------------------------------------------------------------------------- Dhole
+                              |
+                              \----------------------------------------------------------------------------------------------------------------------------------------------------- African wild dog
+
+Bootstrap 50% majority-rule consensus tree
+   (plus other groups compatible with this tree)
+
+                                                                                                                                                   /----------------------------- sidestriped jackal(1)
+/--------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                                  \----------------------------- blackbacked jackal(5)
+|
+|                                                                                                                    /----------------------------------------------------------- African golden wolf(2)
+|                                                                                                                    |
+78                                                                                      /-------------69-------------+                             /----------------------------- coyote(3)
+|                                                                                       |                            \-------------53--------------+
+|                                                          /-------------68-------------+                                                          \----------------------------- gray wolf(4)
+|                                                          |                            |
+|                            /-------------66--------------+                            \---------------------------------------------------------------------------------------- Ethiopian wolf(6)
+|                            |                             |
+\----------------------------+                             \--------------------------------------------------------------------------------------------------------------------- Dhole(7)
+                             |
+                             \--------------------------------------------------------------------------------------------------------------------------------------------------- African wild dog(8)
+
+Bipartitions found in one or more trees and frequency of occurrence (bootstrap support values):
+
+12345678          Freq
+----------------------
+.***.***            78
+.***....            69
+.***.*..            68
+.***.**.            66
+..**....            53
+.*.*....            26
+.*...*..            18
+.***.*.*            15
+....*..*            14
+.....**.            13
+....****             8
+.....*.*             5
+
+11 groups at (relative) frequency less than 5% not shown
+
+Bootstrap consensus tree stored to tree buffer (replacing previously stored tree)
+
+Time used for SVDQuartet analysis = 10.07 sec (CPU time = 20.01 sec)
+
+paup> saveTrees file=canids.tre
+
+1 tree saved to file "~/Desktop/svd_astral_tutorial/svdquartets_tutorial_actual/canids.tre"
+
+paup> quit

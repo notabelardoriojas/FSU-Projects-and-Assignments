@@ -1,0 +1,2 @@
+all:
+	/usr/local/cuda/bin/nvcc -o c2g.exe Jpegfile.cpp c2g.cu JpegLib/libjpeg.a
